@@ -2,8 +2,11 @@ import os
 from pydantic import BaseModel, Field
 
 class JudgeSettings(BaseModel):
-    # Model Configurations (Decoupled Judge and Generator)
+    # Model Configurations (Decoupled Cross-Family Generation and Evaluation)
+    # Primary Judge: Llama 3.3 70B Instruct (Alternative: Claude 3.5 Sonnet)
     judge_model: str = Field(default=os.getenv("JUDGE_MODEL", "meta-llama/llama-3.3-70b-instruct"))
+    
+    # Primary Generator: Mistral 7B Instruct (Alternative: GPT-4o-mini)
     generator_model: str = Field(default=os.getenv("GENERATOR_MODEL", "mistralai/mistral-7b-instruct"))
     
     # API Keys

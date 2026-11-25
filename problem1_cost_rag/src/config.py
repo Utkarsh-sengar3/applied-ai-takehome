@@ -22,7 +22,8 @@ class Settings(BaseModel):
     # LLM settings
     openrouter_api_key: str = Field(default=os.getenv("OPENROUTER_API_KEY", ""))
     openai_api_key: str = Field(default=os.getenv("OPENAI_API_KEY", ""))
-    llm_model: str = Field(default=os.getenv("LLM_MODEL", "meta-llama/llama-3.3-70b-instruct"))
+    # LLM Generator settings (Primary: Mistral 7B Instruct, Alternative: GPT-4o-mini)
+    llm_model: str = Field(default=os.getenv("LLM_MODEL", "mistralai/mistral-7b-instruct"))
     
     # Service settings
     host: str = Field(default=os.getenv("HOST", "0.0.0.0"))
