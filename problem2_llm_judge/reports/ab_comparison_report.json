@@ -1,0 +1,276 @@
+{
+  "config_a_name": "Config A (Prompt v1 - Baseline Unstructured)",
+  "config_b_name": "Config B (Prompt v2 - Structured CoT + Negative Constraints)",
+  "total_pairs_evaluated": 20,
+  "wins_config_a": 0,
+  "wins_config_b": 20,
+  "ties": 0,
+  "win_rate_config_a_pct": 0.0,
+  "win_rate_config_b_pct": 100.0,
+  "tie_rate_pct": 0.0,
+  "declared_winner": "Config B (Prompt v2 - Structured CoT + Negative Constraints)",
+  "position_bias_flip_rate_before_swap_pct": 0.0,
+  "position_bias_flip_rate_after_mitigation_pct": 0.0,
+  "results": [
+    {
+      "case_id": "ab_01",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1687.5,
+      "tokens": {
+        "prompt_tokens": 334,
+        "completion_tokens": 110,
+        "total_tokens": 446
+      }
+    },
+    {
+      "case_id": "ab_02",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1773.01,
+      "tokens": {
+        "prompt_tokens": 258,
+        "completion_tokens": 110,
+        "total_tokens": 370
+      }
+    },
+    {
+      "case_id": "ab_03",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1807.68,
+      "tokens": {
+        "prompt_tokens": 280,
+        "completion_tokens": 110,
+        "total_tokens": 392
+      }
+    },
+    {
+      "case_id": "ab_04",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1780.16,
+      "tokens": {
+        "prompt_tokens": 266,
+        "completion_tokens": 110,
+        "total_tokens": 378
+      }
+    },
+    {
+      "case_id": "ab_05",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1818.26,
+      "tokens": {
+        "prompt_tokens": 262,
+        "completion_tokens": 110,
+        "total_tokens": 374
+      }
+    },
+    {
+      "case_id": "ab_06",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 2002.15,
+      "tokens": {
+        "prompt_tokens": 326,
+        "completion_tokens": 110,
+        "total_tokens": 436
+      }
+    },
+    {
+      "case_id": "ab_07",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1791.16,
+      "tokens": {
+        "prompt_tokens": 290,
+        "completion_tokens": 110,
+        "total_tokens": 402
+      }
+    },
+    {
+      "case_id": "ab_08",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1920.08,
+      "tokens": {
+        "prompt_tokens": 306,
+        "completion_tokens": 110,
+        "total_tokens": 416
+      }
+    },
+    {
+      "case_id": "ab_09",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1750.28,
+      "tokens": {
+        "prompt_tokens": 350,
+        "completion_tokens": 110,
+        "total_tokens": 460
+      }
+    },
+    {
+      "case_id": "ab_10",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1718.52,
+      "tokens": {
+        "prompt_tokens": 322,
+        "completion_tokens": 110,
+        "total_tokens": 434
+      }
+    },
+    {
+      "case_id": "ab_11",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1693.29,
+      "tokens": {
+        "prompt_tokens": 270,
+        "completion_tokens": 110,
+        "total_tokens": 382
+      }
+    },
+    {
+      "case_id": "ab_12",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1737.4,
+      "tokens": {
+        "prompt_tokens": 294,
+        "completion_tokens": 110,
+        "total_tokens": 406
+      }
+    },
+    {
+      "case_id": "ab_13",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1721.3,
+      "tokens": {
+        "prompt_tokens": 296,
+        "completion_tokens": 110,
+        "total_tokens": 408
+      }
+    },
+    {
+      "case_id": "ab_14",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1684.45,
+      "tokens": {
+        "prompt_tokens": 288,
+        "completion_tokens": 110,
+        "total_tokens": 398
+      }
+    },
+    {
+      "case_id": "ab_15",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1786.51,
+      "tokens": {
+        "prompt_tokens": 288,
+        "completion_tokens": 110,
+        "total_tokens": 400
+      }
+    },
+    {
+      "case_id": "ab_16",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1683.55,
+      "tokens": {
+        "prompt_tokens": 296,
+        "completion_tokens": 110,
+        "total_tokens": 408
+      }
+    },
+    {
+      "case_id": "ab_17",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1701.41,
+      "tokens": {
+        "prompt_tokens": 270,
+        "completion_tokens": 110,
+        "total_tokens": 380
+      }
+    },
+    {
+      "case_id": "ab_18",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1651.6,
+      "tokens": {
+        "prompt_tokens": 302,
+        "completion_tokens": 110,
+        "total_tokens": 414
+      }
+    },
+    {
+      "case_id": "ab_19",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1672.65,
+      "tokens": {
+        "prompt_tokens": 262,
+        "completion_tokens": 110,
+        "total_tokens": 374
+      }
+    },
+    {
+      "case_id": "ab_20",
+      "final_winner": "OPTION_B",
+      "winner_order1": "OPTION_B",
+      "winner_order2": "OPTION_B",
+      "position_flip": false,
+      "latency_ms": 1652.74,
+      "tokens": {
+        "prompt_tokens": 294,
+        "completion_tokens": 110,
+        "total_tokens": 406
+      }
+    }
+  ]
+}

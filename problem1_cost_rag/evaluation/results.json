@@ -1,0 +1,913 @@
+{
+  "summary": {
+    "k": 5,
+    "total_questions": 20,
+    "retrieval_metrics": {
+      "hit_rate_recall_at_k": 0.9,
+      "mrr": 0.85,
+      "ndcg_at_k": 1.029,
+      "context_precision": 0.829
+    },
+    "answer_metrics": {
+      "faithfulness": 0.95,
+      "answer_relevance": 0.765,
+      "exact_match": 0.15,
+      "f1_score": 0.416
+    },
+    "latency_metrics": {
+      "retrieval_p50_ms": 1172.39,
+      "retrieval_p95_ms": 1914.4,
+      "e2e_p50_ms": 2048.38,
+      "e2e_p95_ms": 2896.7
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "query": "What is the monthly infrastructure cost for 1M vectors on ChromaDB versus a Managed Vector DB?",
+      "is_answerable": true,
+      "answer": "Infrastructure & Scale Cost Modeling Below is the infrastructure cost breakdown for scaling from 100K to 10M vectors (384 dimensions): Scale (Vectors) Embedded ChromaDB (/mo)ManagedVectorDB(/mo) Monthly Savings ------------------------------------ [Chunk 1] Operational Trade-Offs & Thresholds While embedded ChromaDB delivers 99%+ cost reduction for read-heavy, low-to-medium QPS workloads, teams should transition back to managed vector databases un [Chunk 2]",
+      "gold_answer": "ChromaDB costs $0.96 per month on a 12 GB SSD volume compared to $280.00 per month for a managed vector database (4 pods / HA), saving 99.6%.",
+      "citations": [
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6891
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6568
+        },
+        {
+          "chunk_id": "b9411219d642733f9861ad94",
+          "chunk_label": "[Chunk 3]",
+          "source": "architecture_guide.md",
+          "similarity": 0.6353
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6041
+        },
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 5]",
+          "source": "architecture_guide.md",
+          "similarity": 0.5414
+        }
+      ],
+      "retrieval_latency_ms": 2248.89,
+      "e2e_latency_ms": 3708.67,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.631,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "em": 0.0,
+      "f1": 0.135
+    },
+    {
+      "id": "q02",
+      "query": "What are the P50 and P95 retrieval latency numbers for embedded ChromaDB?",
+      "is_answerable": true,
+      "answer": "- ChromaDB (Embedded): P50 Retrieval Latency = 4.2 ms; P95 Retrieval Latency = 8.6 ms. [Chunk 1] ChromaDB implements iterative pre-filtering over SQLite metadata tables to balance retrieval speed with filter completeness. [Chunk 2]",
+      "gold_answer": "Embedded ChromaDB achieves a P50 retrieval latency of 4.2 ms and a P95 retrieval latency of 8.6 ms.",
+      "citations": [
+        {
+          "chunk_id": "5afeeb6deacd31a755b312ec",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6159
+        },
+        {
+          "chunk_id": "8d92844b3249cfd02bbd40d9",
+          "chunk_label": "[Chunk 2]",
+          "source": "architecture_guide.md",
+          "similarity": 0.4519
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4491
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4051
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3516
+        }
+      ],
+      "retrieval_latency_ms": 1354.89,
+      "e2e_latency_ms": 2354.12,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "em": 0.0,
+      "f1": 0.519
+    },
+    {
+      "id": "q03",
+      "query": "How much RAM is required for 1 million 1536-dimensional vectors with HNSW graph indexing?",
+      "is_answerable": true,
+      "answer": "- When accounting for HNSW graph edges (with parameters M=16, efConstruction=100), memory consumption increases by a factor of 1.5x to 2.5x, r [Chunk 1] Unlike traditional relational database lookups that rely on exact B-tree indexes, vector search navigates high-dimensional metric spaces (typically 384 to 1536 dimensions) to find vectors with the smallest distance or highest cosine similarity. [Chunk 2]",
+      "gold_answer": "Raw storage requires 6.14 GB, and accounting for HNSW graph edges (M=16, efConstruction=100) increases total memory to 10 GB to 15 GB of RAM.",
+      "citations": [
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 1]",
+          "source": "architecture_guide.md",
+          "similarity": 0.6608
+        },
+        {
+          "chunk_id": "bae0e6b44a6452b4c759b5d4",
+          "chunk_label": "[Chunk 2]",
+          "source": "architecture_guide.md",
+          "similarity": 0.4615
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.44
+        },
+        {
+          "chunk_id": "b9411219d642733f9861ad94",
+          "chunk_label": "[Chunk 4]",
+          "source": "architecture_guide.md",
+          "similarity": 0.4357
+        },
+        {
+          "chunk_id": "5afeeb6deacd31a755b312ec",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4237
+        }
+      ],
+      "retrieval_latency_ms": 1249.54,
+      "e2e_latency_ms": 2122.76,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.431,
+      "context_precision": 0.75,
+      "faithfulness": 1.0,
+      "relevance": 0.9,
+      "em": 0.0,
+      "f1": 0.308
+    },
+    {
+      "id": "q04",
+      "query": "How does ChromaDB achieve zero idle server costs compared to cloud vector databases?",
+      "is_answerable": true,
+      "answer": "Operational Trade-Offs & Thresholds While embedded ChromaDB delivers 99%+ cost reduction for read-heavy, low-to-medium QPS workloads, teams should transition back to managed vector databases un [Chunk 1] - On managed cloud services, an always-on pod with 16 GB RAM typically costs between $70 and $120 per month per pod. [Chunk 2]",
+      "gold_answer": "ChromaDB runs in-process using SQLite for metadata and DuckDB/hnswlib for vector indexing, persisting directly to the host filesystem with zero idle server cost.",
+      "citations": [
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6565
+        },
+        {
+          "chunk_id": "b9411219d642733f9861ad94",
+          "chunk_label": "[Chunk 2]",
+          "source": "architecture_guide.md",
+          "similarity": 0.6397
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6268
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6164
+        },
+        {
+          "chunk_id": "5afeeb6deacd31a755b312ec",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5363
+        }
+      ],
+      "retrieval_latency_ms": 1531.69,
+      "e2e_latency_ms": 2515.15,
+      "hit": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "context_precision": 0.0,
+      "faithfulness": 1.0,
+      "relevance": 0.68,
+      "em": 0.0,
+      "f1": 0.177
+    },
+    {
+      "id": "q05",
+      "query": "What is the formula used for ensuring idempotent re-ingestion without duplicate vectors?",
+      "is_answerable": true,
+      "answer": "Ingestion pipelines must perform upsert operations using these deterministic hashes, ensuring that re-running ingestion produces zero duplicate vectors and zero [Chunk 1] at re-running ingestion produces zero duplicate vectors and zero index drift. [Chunk 2]",
+      "gold_answer": "Deterministic hashes derived from SHA256(source_filename + chunk_index + chunk_text) are used for upsert operations to prevent duplicate vectors.",
+      "citations": [
+        {
+          "chunk_id": "629d0676909e741d5195c089",
+          "chunk_label": "[Chunk 1]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.5016
+        },
+        {
+          "chunk_id": "67eabb44fb26e057fee77374",
+          "chunk_label": "[Chunk 2]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.3471
+        },
+        {
+          "chunk_id": "cb014c4183ac3f9ee3ea066d",
+          "chunk_label": "[Chunk 3]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.2951
+        },
+        {
+          "chunk_id": "deedc2951303942f02f10f85",
+          "chunk_label": "[Chunk 4]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.2827
+        },
+        {
+          "chunk_id": "bae0e6b44a6452b4c759b5d4",
+          "chunk_label": "[Chunk 5]",
+          "source": "architecture_guide.md",
+          "similarity": 0.28
+        }
+      ],
+      "retrieval_latency_ms": 1133.63,
+      "e2e_latency_ms": 1968.65,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.5,
+      "context_precision": 0.833,
+      "faithfulness": 1.0,
+      "relevance": 0.67,
+      "em": 0.0,
+      "f1": 0.222
+    },
+    {
+      "id": "q06",
+      "query": "What are the recommended default chunk size and chunk overlap values and why?",
+      "is_answerable": true,
+      "answer": "Vector Search Engineering & Evaluation Principles Engineering Principles for Production Retrieval-Augmented Generation Optimal Chunking Architectures Chunk size and overlap fundamentally dictate retrieval precision and LLM context coherence. [Chunk 1] A balanced default of 512 characters with 64 characters of sliding overlap preserves inter-chunk transitional continuity while maintaining high semantic density for retrieval. [Chunk 2]",
+      "gold_answer": "A default of 512 characters with 64 characters of sliding overlap preserves inter-chunk transitional continuity while maintaining high semantic density.",
+      "citations": [
+        {
+          "chunk_id": "deedc2951303942f02f10f85",
+          "chunk_label": "[Chunk 1]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.53
+        },
+        {
+          "chunk_id": "cb014c4183ac3f9ee3ea066d",
+          "chunk_label": "[Chunk 2]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.3931
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.269
+        },
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 4]",
+          "source": "architecture_guide.md",
+          "similarity": 0.2628
+        },
+        {
+          "chunk_id": "67eabb44fb26e057fee77374",
+          "chunk_label": "[Chunk 5]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.2504
+        }
+      ],
+      "retrieval_latency_ms": 1431.02,
+      "e2e_latency_ms": 2238.57,
+      "hit": 1.0,
+      "mrr": 0.5,
+      "ndcg": 0.631,
+      "context_precision": 0.5,
+      "faithfulness": 1.0,
+      "relevance": 0.86,
+      "em": 0.0,
+      "f1": 0.553
+    },
+    {
+      "id": "q07",
+      "query": "What are the disadvantages of using very small chunks (128-256 characters)?",
+      "is_answerable": true,
+      "answer": "128 to 256 characters) offer high specificity and tight embedding clustering, but they frequently split sentences across boundaries, omitting essential coreferents and semantic context. [Chunk 1] onversely, large chunks (e.g. [Chunk 2]",
+      "gold_answer": "Very small chunks frequently split sentences across boundaries, omitting essential coreferents and semantic context.",
+      "citations": [
+        {
+          "chunk_id": "deedc2951303942f02f10f85",
+          "chunk_label": "[Chunk 1]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.5145
+        },
+        {
+          "chunk_id": "cb014c4183ac3f9ee3ea066d",
+          "chunk_label": "[Chunk 2]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.4206
+        },
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 3]",
+          "source": "architecture_guide.md",
+          "similarity": 0.347
+        },
+        {
+          "chunk_id": "5afeeb6deacd31a755b312ec",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.346
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3118
+        }
+      ],
+      "retrieval_latency_ms": 1288.53,
+      "e2e_latency_ms": 2181.74,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.43,
+      "em": 0.0,
+      "f1": 0.511
+    },
+    {
+      "id": "q08",
+      "query": "What are the disadvantages of using very large chunks (1024-2048 characters)?",
+      "is_answerable": true,
+      "answer": "1024 to 2048 characters) capture c [Chunk 1] 1024 to 2048 characters) capture complete narrative thoughts but dilute vector focus with extraneous noise, lowering cosine similarity against specific pinpoint questions. [Chunk 2]",
+      "gold_answer": "Large chunks dilute vector focus with extraneous noise, lowering cosine similarity against specific pinpoint questions.",
+      "citations": [
+        {
+          "chunk_id": "deedc2951303942f02f10f85",
+          "chunk_label": "[Chunk 1]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.5276
+        },
+        {
+          "chunk_id": "cb014c4183ac3f9ee3ea066d",
+          "chunk_label": "[Chunk 2]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.4617
+        },
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 3]",
+          "source": "architecture_guide.md",
+          "similarity": 0.3472
+        },
+        {
+          "chunk_id": "5afeeb6deacd31a755b312ec",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3399
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3093
+        }
+      ],
+      "retrieval_latency_ms": 1273.47,
+      "e2e_latency_ms": 2130.68,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.631,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.5,
+      "em": 0.0,
+      "f1": 0.553
+    },
+    {
+      "id": "q09",
+      "query": "Under what specific conditions should a team switch back to a managed vector database?",
+      "is_answerable": true,
+      "answer": "ads, teams should transition back to managed vector databases under the following conditions: a) High Concurrent Ingestion: When concurrent write throughput exceeds 5,000 upserts/sec, distributed ingestion queues and partitioned indexing become mandatory. [Chunk 1] Operational Trade-Offs & Thresholds While embedded ChromaDB delivers 99%+ cost reduction for read-heavy, low-to-medium QPS workloads, teams should transition back to managed vector databases un [Chunk 2]",
+      "gold_answer": "Teams should switch back when ingestion exceeds 5,000 upserts/sec, query traffic exceeds single-node bounds (>2,000 QPS), or multi-tenant SOC2/RBAC isolation is required.",
+      "citations": [
+        {
+          "chunk_id": "4cfd701cf03ef6c88fc02200",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.7028
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5489
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4448
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3976
+        },
+        {
+          "chunk_id": "a90a56096673f67a8a460c4e",
+          "chunk_label": "[Chunk 5]",
+          "source": "architecture_guide.md",
+          "similarity": 0.3799
+        }
+      ],
+      "retrieval_latency_ms": 1387.87,
+      "e2e_latency_ms": 2235.41,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.82,
+      "em": 0.0,
+      "f1": 0.255
+    },
+    {
+      "id": "q10",
+      "query": "What is the difference between pre-filtering and post-filtering in metadata search?",
+      "is_answerable": true,
+      "answer": "- **Post-filtering**: Top-K nearest neighbors are retrieved from the entire vector space first, and non-matching metadata records are discarded afterwards. [Chunk 1] ChromaDB implements iterative pre-filtering over SQLite metadata tables to balance retrieval speed with filter completeness. [Chunk 2]",
+      "gold_answer": "Pre-filtering applies metadata filters before distance computation, while post-filtering retrieves top-K vectors first and discards non-matching records afterwards.",
+      "citations": [
+        {
+          "chunk_id": "c86f0ae9cd955b27908dca0e",
+          "chunk_label": "[Chunk 1]",
+          "source": "architecture_guide.md",
+          "similarity": 0.6088
+        },
+        {
+          "chunk_id": "8d92844b3249cfd02bbd40d9",
+          "chunk_label": "[Chunk 2]",
+          "source": "architecture_guide.md",
+          "similarity": 0.4762
+        },
+        {
+          "chunk_id": "a90a56096673f67a8a460c4e",
+          "chunk_label": "[Chunk 3]",
+          "source": "architecture_guide.md",
+          "similarity": 0.4748
+        },
+        {
+          "chunk_id": "67eabb44fb26e057fee77374",
+          "chunk_label": "[Chunk 4]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.238
+        },
+        {
+          "chunk_id": "f5394d0d44ebcb72c26f3f16",
+          "chunk_label": "[Chunk 5]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.221
+        }
+      ],
+      "retrieval_latency_ms": 1400.27,
+      "e2e_latency_ms": 2345.21,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 2.131,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.64,
+      "em": 0.0,
+      "f1": 0.406
+    },
+    {
+      "id": "q11",
+      "query": "What storage engine and indexing mechanism does LanceDB use for cost reduction?",
+      "is_answerable": true,
+      "answer": "nd LanceDB provide viable low-cost alternatives: 1. [Chunk 1] Executive Summary & Benchmark Setup This technical report evaluates retrieval latency, ingestion throughput, and total cost of ownership (TCO) across three tiers of vector storage: - Tier A: In-Memory Managed Vector DB (Pinecone s1 / p1 pods, Weaviate Cloud) - Tier B: Self-Hosted Relational Store (PostgreSQL with pgvector) - Tier C: Embedded Persistent Store (ChromaDB with HNSW on SQLite) 2. [Chunk 2]",
+      "gold_answer": "LanceDB uses Apache Arrow and Lance columnar format with disk-based IVF-PQ indexing, allowing vectors to remain on disk or S3 with zero memory overhead.",
+      "citations": [
+        {
+          "chunk_id": "94ad57409f39c365ba95ccf2",
+          "chunk_label": "[Chunk 1]",
+          "source": "architecture_guide.md",
+          "similarity": 0.6796
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5166
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5016
+        },
+        {
+          "chunk_id": "a90a56096673f67a8a460c4e",
+          "chunk_label": "[Chunk 4]",
+          "source": "architecture_guide.md",
+          "similarity": 0.4754
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4646
+        }
+      ],
+      "retrieval_latency_ms": 1216.3,
+      "e2e_latency_ms": 2109.11,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.5,
+      "em": 0.0,
+      "f1": 0.126
+    },
+    {
+      "id": "q12",
+      "query": "What monthly cost savings are achieved at 10M vectors using ChromaDB vs managed DB?",
+      "is_answerable": true,
+      "answer": "Operational Trade-Offs & Thresholds While embedded ChromaDB delivers 99%+ cost reduction for read-heavy, low-to-medium QPS workloads, teams should transition back to managed vector databases un [Chunk 1] Infrastructure & Scale Cost Modeling Below is the infrastructure cost breakdown for scaling from 100K to 10M vectors (384 dimensions): Scale (Vectors) Embedded ChromaDB (/mo)ManagedVectorDB(/mo) Monthly Savings ------------------------------------ [Chunk 2]",
+      "gold_answer": "At 10M vectors, ChromaDB costs $9.60/month on 120 GB SSD storage vs $2,100.00/month for managed DB pods, saving $2,090.40/month (99.5%).",
+      "citations": [
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.665
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.6533
+        },
+        {
+          "chunk_id": "b9411219d642733f9861ad94",
+          "chunk_label": "[Chunk 3]",
+          "source": "architecture_guide.md",
+          "similarity": 0.6269
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5799
+        },
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 5]",
+          "source": "architecture_guide.md",
+          "similarity": 0.5084
+        }
+      ],
+      "retrieval_latency_ms": 1281.84,
+      "e2e_latency_ms": 2692.55,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "em": 0.0,
+      "f1": 0.157
+    },
+    {
+      "id": "q13",
+      "query": "What is the P50 and P95 latency of pgvector on a c5.xlarge instance?",
+      "is_answerable": true,
+      "answer": "- pgvector (Self-hosted c5.xlarge): P50 Latency = 6.8 ms; P95 Latency = 14.1 ms. [Chunk 1] Executive Summary & Benchmark Setup This technical report evaluates retrieval latency, ingestion throughput, and total cost of ownership (TCO) across three tiers of vector storage: - Tier A: In-Memory Managed Vector DB (Pinecone s1 / p1 pods, Weaviate Cloud) - Tier B: Self-Hosted Relational Store (PostgreSQL with pgvector) - Tier C: Embedded Persistent Store (ChromaDB with HNSW on SQLite) 2. [Chunk 2]",
+      "gold_answer": "pgvector on a c5.xlarge achieves a P50 latency of 6.8 ms and a P95 latency of 14.1 ms.",
+      "citations": [
+        {
+          "chunk_id": "5afeeb6deacd31a755b312ec",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5846
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4313
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3829
+        },
+        {
+          "chunk_id": "08ad85cdd4d8c876adf5fb24",
+          "chunk_label": "[Chunk 4]",
+          "source": "architecture_guide.md",
+          "similarity": 0.312
+        },
+        {
+          "chunk_id": "a90a56096673f67a8a460c4e",
+          "chunk_label": "[Chunk 5]",
+          "source": "architecture_guide.md",
+          "similarity": 0.2889
+        }
+      ],
+      "retrieval_latency_ms": 1431.28,
+      "e2e_latency_ms": 2316.66,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.9,
+      "em": 0.0,
+      "f1": 0.371
+    },
+    {
+      "id": "q14",
+      "query": "How does pgvector eliminate a dedicated vector database bill for existing Postgres users?",
+      "is_answerable": true,
+      "answer": "It allows organizations already operating a relational database to colocate vector embeddings alongside application relational data, eliminating a dedicated vector database bill entirely. [Chunk 1] --- Page 1 --- Vector Database Benchmark Report & Cost Analysis 1. [Chunk 2]",
+      "gold_answer": "It extends PostgreSQL with IVFFlat and HNSW indexes, allowing organizations to colocate vector embeddings alongside relational data in an existing database.",
+      "citations": [
+        {
+          "chunk_id": "a90a56096673f67a8a460c4e",
+          "chunk_label": "[Chunk 1]",
+          "source": "architecture_guide.md",
+          "similarity": 0.59
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.5344
+        },
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4384
+        },
+        {
+          "chunk_id": "4cfd701cf03ef6c88fc02200",
+          "chunk_label": "[Chunk 4]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4296
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.4173
+        }
+      ],
+      "retrieval_latency_ms": 1384.07,
+      "e2e_latency_ms": 2317.79,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.6,
+      "em": 0.0,
+      "f1": 0.351
+    },
+    {
+      "id": "q15",
+      "query": "What is the definition of MRR in information retrieval evaluation?",
+      "is_answerable": true,
+      "answer": "Information Retrieval & Quality Metrics Evaluating RAG systems requires distinct metrics across retrieval and generation stages: Recall@K / Hit Rate : Fraction of queries where at least one ground-truth chunk appears in the top-K retrieved list. [Chunk 1] Vector Search Engineering & Evaluation Principles Engineering Principles for Production Retrieval-Augmented Generation Optimal Chunking Architectures Chunk size and overlap fundamentally dictate retrieval precision and LLM context coherence. [Chunk 3]",
+      "gold_answer": "MRR averages the reciprocal rank of the first relevant document retrieved across all evaluated queries.",
+      "citations": [
+        {
+          "chunk_id": "67eabb44fb26e057fee77374",
+          "chunk_label": "[Chunk 1]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.5632
+        },
+        {
+          "chunk_id": "f5394d0d44ebcb72c26f3f16",
+          "chunk_label": "[Chunk 2]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.3486
+        },
+        {
+          "chunk_id": "deedc2951303942f02f10f85",
+          "chunk_label": "[Chunk 3]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.3041
+        },
+        {
+          "chunk_id": "8d92844b3249cfd02bbd40d9",
+          "chunk_label": "[Chunk 4]",
+          "source": "architecture_guide.md",
+          "similarity": 0.2822
+        },
+        {
+          "chunk_id": "c86f0ae9cd955b27908dca0e",
+          "chunk_label": "[Chunk 5]",
+          "source": "architecture_guide.md",
+          "similarity": 0.2542
+        }
+      ],
+      "retrieval_latency_ms": 1396.56,
+      "e2e_latency_ms": 2219.26,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 0.9,
+      "em": 0.0,
+      "f1": 0.122
+    },
+    {
+      "id": "q16",
+      "query": "What is the definition of Context Precision in RAG evaluation?",
+      "is_answerable": true,
+      "answer": "Context Precision : Measures whether relevant chunks are concentrated at the highest ranks within the retrieved window. [Chunk 2] Vector Search Engineering & Evaluation Principles Engineering Principles for Production Retrieval-Augmented Generation Optimal Chunking Architectures Chunk size and overlap fundamentally dictate retrieval precision and LLM context coherence. [Chunk 3]",
+      "gold_answer": "Context precision measures whether relevant chunks are concentrated at the highest ranks within the retrieved top-k window.",
+      "citations": [
+        {
+          "chunk_id": "67eabb44fb26e057fee77374",
+          "chunk_label": "[Chunk 1]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.4981
+        },
+        {
+          "chunk_id": "f5394d0d44ebcb72c26f3f16",
+          "chunk_label": "[Chunk 2]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.4931
+        },
+        {
+          "chunk_id": "deedc2951303942f02f10f85",
+          "chunk_label": "[Chunk 3]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.2511
+        },
+        {
+          "chunk_id": "cb014c4183ac3f9ee3ea066d",
+          "chunk_label": "[Chunk 4]",
+          "source": "vector_search_principles.html",
+          "similarity": 0.2425
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.1765
+        }
+      ],
+      "retrieval_latency_ms": 1931.88,
+      "e2e_latency_ms": 2898.48,
+      "hit": 1.0,
+      "mrr": 0.5,
+      "ndcg": 0.631,
+      "context_precision": 0.5,
+      "faithfulness": 1.0,
+      "relevance": 0.9,
+      "em": 0.0,
+      "f1": 0.492
+    },
+    {
+      "id": "q17",
+      "query": "What is the speed of sound on Mars during a winter dust storm?",
+      "is_answerable": false,
+      "answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "citations": [],
+      "retrieval_latency_ms": 1753.65,
+      "e2e_latency_ms": 1753.75,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "q18",
+      "query": "Who won the ICC Cricket World Cup in 1983 and what was the final score?",
+      "is_answerable": false,
+      "answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "citations": [],
+      "retrieval_latency_ms": 1787.2,
+      "e2e_latency_ms": 1787.3,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "q19",
+      "query": "What are the quarterly financial results of Apple in Q3 2024?",
+      "is_answerable": false,
+      "answer": "According to the documentation: ctorDB(/mo) Monthly Savings ----------------------------------------------------------------------------------------- 100,000 .00 (Local/EBS share) .00 (Single Pod) .00 (100%) 1,000,000 .96 (12 GB SSD Volume) .00 (4 Pods / HA) .04 (99.6%) 10,000,000 .60 (120 GB SSD Volume) ,100.00 (32 Pods / Scaled),090.40 (99.5%) 4. [Chunk 1]",
+      "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "citations": [
+        {
+          "chunk_id": "e63e64631f4fdfdca5f0d242",
+          "chunk_label": "[Chunk 1]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.3528
+        },
+        {
+          "chunk_id": "be17ac7d9b3234c112c2cb1e",
+          "chunk_label": "[Chunk 2]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.2525
+        },
+        {
+          "chunk_id": "4d2e02087b938ff83a2c2fab",
+          "chunk_label": "[Chunk 3]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.2321
+        },
+        {
+          "chunk_id": "b9411219d642733f9861ad94",
+          "chunk_label": "[Chunk 4]",
+          "source": "architecture_guide.md",
+          "similarity": 0.2289
+        },
+        {
+          "chunk_id": "4cfd701cf03ef6c88fc02200",
+          "chunk_label": "[Chunk 5]",
+          "source": "database_benchmarks.pdf",
+          "similarity": 0.2103
+        }
+      ],
+      "retrieval_latency_ms": 1965.11,
+      "e2e_latency_ms": 3107.41,
+      "hit": 0.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 0.0,
+      "relevance": 0.0,
+      "em": 0.0,
+      "f1": 0.06
+    },
+    {
+      "id": "q20",
+      "query": "How do you synthesize aspirin using salicylic acid and acetic anhydride in a chemistry lab?",
+      "is_answerable": false,
+      "answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+      "citations": [],
+      "retrieval_latency_ms": 2101.93,
+      "e2e_latency_ms": 2102.06,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "em": 1.0,
+      "f1": 1.0
+    }
+  ]
+}

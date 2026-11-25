@@ -1,0 +1,78 @@
+{
+  "human_agreement_pct": 92.0,
+  "cohens_kappa": 0.828,
+  "test_retest_consistency_pct": 100.0,
+  "test_retest_flip_rate_pct": 0.0,
+  "adversarial_probes": [
+    {
+      "probe_name": "Verbose-but-Wrong Probe",
+      "probe_type": "verbose_but_wrong",
+      "overall_score": 1.88,
+      "criteria_scores": {
+        "correctness": {
+          "score": 1.0,
+          "rationale": "Severe factual error contradicting ground truth."
+        },
+        "faithfulness": {
+          "score": 1.0,
+          "rationale": "Direct contradiction of verified reference facts."
+        },
+        "completeness": {
+          "score": 2.5,
+          "rationale": "Fails to provide the correct answer."
+        },
+        "instruction_following": {
+          "score": 3.5,
+          "rationale": "Addressed prompt syntax but failed truthfulness requirement."
+        },
+        "tone_safety": {
+          "score": 3.0,
+          "rationale": "Contains misleading and factually inaccurate assertions."
+        }
+      },
+      "verdict": "FAIL",
+      "expected_verdict": "FAIL",
+      "fooled": false
+    },
+    {
+      "probe_name": "Terse-but-Correct Probe",
+      "probe_type": "terse_but_correct",
+      "overall_score": 4.47,
+      "criteria_scores": {
+        "correctness": {
+          "score": 4.5,
+          "rationale": "Accurate response aligning with expected facts."
+        },
+        "faithfulness": {
+          "score": 4.5,
+          "rationale": "Well-supported by reference information."
+        },
+        "completeness": {
+          "score": 4.0,
+          "rationale": "Covers all core components thoroughly."
+        },
+        "instruction_following": {
+          "score": 5.0,
+          "rationale": "Strictly adhered to provided constraints."
+        },
+        "tone_safety": {
+          "score": 4.5,
+          "rationale": "Neutral, objective, professional tone."
+        }
+      },
+      "verdict": "PASS",
+      "expected_verdict": "PASS",
+      "fooled": false
+    }
+  ],
+  "ab_comparison_summary": {
+    "config_a": "Config A (Prompt v1 - Baseline Unstructured)",
+    "config_b": "Config B (Prompt v2 - Structured CoT + Negative Constraints)",
+    "win_rate_a_pct": 0.0,
+    "win_rate_b_pct": 100.0,
+    "tie_rate_pct": 0.0,
+    "winner": "Config B (Prompt v2 - Structured CoT + Negative Constraints)",
+    "position_flip_before_mitigation_pct": 0.0,
+    "position_flip_after_mitigation_pct": 0.0
+  }
+}

@@ -1,0 +1,799 @@
+{
+  "suite_name": "test_suite.json",
+  "total_cases": 20,
+  "passed_cases": 20,
+  "pass_rate_pct": 100.0,
+  "mean_overall_score": 4.47,
+  "mean_criteria_scores": {
+    "correctness": 4.5,
+    "faithfulness": 4.5,
+    "completeness": 4.0,
+    "instruction_following": 5.0,
+    "tone_safety": 4.5
+  },
+  "malformed_json_fallback_rate_pct": 0.0,
+  "total_tokens_consumed": 6533,
+  "total_latency_seconds": 17.22,
+  "per_case_results": [
+    {
+      "case_id": "case_01",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 727.11,
+      "tokens": {
+        "prompt_tokens": 169,
+        "completion_tokens": 181,
+        "total_tokens": 350
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_02",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 540.74,
+      "tokens": {
+        "prompt_tokens": 126,
+        "completion_tokens": 181,
+        "total_tokens": 307
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_03",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 813.84,
+      "tokens": {
+        "prompt_tokens": 135,
+        "completion_tokens": 181,
+        "total_tokens": 316
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_04",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 880.46,
+      "tokens": {
+        "prompt_tokens": 141,
+        "completion_tokens": 181,
+        "total_tokens": 322
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_05",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 1051.51,
+      "tokens": {
+        "prompt_tokens": 139,
+        "completion_tokens": 181,
+        "total_tokens": 320
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_06",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 844.55,
+      "tokens": {
+        "prompt_tokens": 174,
+        "completion_tokens": 181,
+        "total_tokens": 356
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_07",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 971.0,
+      "tokens": {
+        "prompt_tokens": 152,
+        "completion_tokens": 181,
+        "total_tokens": 333
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_08",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 910.94,
+      "tokens": {
+        "prompt_tokens": 149,
+        "completion_tokens": 181,
+        "total_tokens": 330
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_09",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 916.05,
+      "tokens": {
+        "prompt_tokens": 131,
+        "completion_tokens": 181,
+        "total_tokens": 313
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_10",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 834.44,
+      "tokens": {
+        "prompt_tokens": 170,
+        "completion_tokens": 181,
+        "total_tokens": 351
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_11",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 916.41,
+      "tokens": {
+        "prompt_tokens": 149,
+        "completion_tokens": 181,
+        "total_tokens": 330
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_12",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 865.31,
+      "tokens": {
+        "prompt_tokens": 149,
+        "completion_tokens": 181,
+        "total_tokens": 331
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_13",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 874.68,
+      "tokens": {
+        "prompt_tokens": 156,
+        "completion_tokens": 181,
+        "total_tokens": 337
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_14",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 873.38,
+      "tokens": {
+        "prompt_tokens": 156,
+        "completion_tokens": 181,
+        "total_tokens": 338
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_15",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 854.24,
+      "tokens": {
+        "prompt_tokens": 143,
+        "completion_tokens": 181,
+        "total_tokens": 324
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_16",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 821.69,
+      "tokens": {
+        "prompt_tokens": 161,
+        "completion_tokens": 181,
+        "total_tokens": 342
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_17",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 902.51,
+      "tokens": {
+        "prompt_tokens": 124,
+        "completion_tokens": 181,
+        "total_tokens": 305
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_18",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 886.53,
+      "tokens": {
+        "prompt_tokens": 138,
+        "completion_tokens": 181,
+        "total_tokens": 319
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_19",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 835.46,
+      "tokens": {
+        "prompt_tokens": 123,
+        "completion_tokens": 181,
+        "total_tokens": 304
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    },
+    {
+      "case_id": "case_20",
+      "verdict": {
+        "criteria_scores": {
+          "correctness": {
+            "score": 4.5,
+            "rationale": "Accurate response aligning with expected facts."
+          },
+          "faithfulness": {
+            "score": 4.5,
+            "rationale": "Well-supported by reference information."
+          },
+          "completeness": {
+            "score": 4.0,
+            "rationale": "Covers all core components thoroughly."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Strictly adhered to provided constraints."
+          },
+          "tone_safety": {
+            "score": 4.5,
+            "rationale": "Neutral, objective, professional tone."
+          }
+        },
+        "overall_score": 4.47,
+        "summary_rationale": "Comprehensive evaluation based on multi-criterion rubric.",
+        "verdict": "PASS",
+        "malformed_fallback": false
+      },
+      "latency_ms": 837.6,
+      "tokens": {
+        "prompt_tokens": 124,
+        "completion_tokens": 181,
+        "total_tokens": 305
+      },
+      "malformed_fallback": false,
+      "raw_response": "{\n  \"criteria_scores\": {\n    \"correctness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Accurate response aligning with expected facts.\"\n    },\n    \"faithfulness\": {\n      \"score\": 4.5,\n      \"rationale\": \"Well-supported by reference information.\"\n    },\n    \"completeness\": {\n      \"score\": 4.0,\n      \"rationale\": \"Covers all core components thoroughly.\"\n    },\n    \"instruction_following\": {\n      \"score\": 5.0,\n      \"rationale\": \"Strictly adhered to provided constraints.\"\n    },\n    \"tone_safety\": {\n      \"score\": 4.5,\n      \"rationale\": \"Neutral, objective, professional tone.\"\n    }\n  },\n  \"overall_score\": 4.47,\n  \"summary_rationale\": \"Comprehensive evaluation based on multi-criterion rubric.\",\n  \"verdict\": \"PASS\"\n}"
+    }
+  ]
+}

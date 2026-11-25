@@ -1,0 +1,126 @@
+{
+  "config_a_name": "Config A (Prompt v1 - Baseline Unstructured)",
+  "config_b_name": "Config B (Prompt v2 - Structured CoT + Negative Constraints)",
+  "cases": [
+    {
+      "id": "ab_01",
+      "input": "Explain the difference between synchronous and asynchronous execution in Node.js.",
+      "output_a": "Synchronous means running one after another. Async means running together with callbacks and promises so it does not take too long.",
+      "output_b": "In Node.js, synchronous execution blocks the single thread event loop until completion, halting all subsequent requests. Asynchronous execution delegates non-CPU tasks (e.g., file/network I/O) to libuv worker threads, returning promises or callbacks so the main event loop continues serving concurrent traffic non-blockingly."
+    },
+    {
+      "id": "ab_02",
+      "input": "What is the time complexity of searching in a balanced Binary Search Tree?",
+      "output_a": "It is generally fast, maybe O(log n) or O(n) if you don't find it immediately depending on how big the tree is.",
+      "output_b": "The time complexity is strictly O(log n) in both average and worst cases for balanced BSTs (e.g., AVL or Red-Black trees), because the tree height is mathematically constrained to ceiling(log2(n + 1))."
+    },
+    {
+      "id": "ab_03",
+      "input": "How do you handle SQL injection vulnerabilities in web applications?",
+      "output_a": "Make sure users don't type bad SQL queries in input boxes and check strings for quotes.",
+      "output_b": "Prevent SQL injection by: 1) Using parameterized queries (prepared statements) ensuring user input is never interpreted as executable SQL code; 2) Employing ORM query builders; 3) Enforcing strict input whitelisting; and 4) Applying least-privilege database user permissions."
+    },
+    {
+      "id": "ab_04",
+      "input": "What are HTTP 401 and 403 status codes and how do they differ?",
+      "output_a": "They both mean an error occurred when you try to open a webpage that needs a password.",
+      "output_b": "HTTP 401 Unauthorized signifies missing or invalid authentication credentials (unauthenticated). HTTP 403 Forbidden indicates the server authenticates the caller's identity but denies access due to insufficient permissions or RBAC policies (unauthorized)."
+    },
+    {
+      "id": "ab_05",
+      "input": "What is the primary function of Docker container layers?",
+      "output_a": "Docker layers are stacked files that make up a container when you run docker build.",
+      "output_b": "Docker image layers are immutable, cryptographically hashed filesystem snapshots created by Dockerfile directives. They enable aggressive build caching, minimize storage duplication across images, and underpin a thin, ephemeral read-write container layer."
+    },
+    {
+      "id": "ab_06",
+      "input": "Summarize CAP theorem in distributed computing.",
+      "output_a": "CAP stands for consistency, availability, and partition tolerance. You can only pick two in your cloud architecture.",
+      "output_b": "CAP theorem asserts that in the presence of a network partition (P), a distributed system must trade off between linearizable Consistency (C—every read receives the most recent write) and Availability (A—every non-failing node returns a non-error response). Because network partitions are inevitable in physical infrastructure, systems must choose CP or AP."
+    },
+    {
+      "id": "ab_07",
+      "input": "What is the purpose of an index in relational databases and what is the trade-off?",
+      "output_a": "Indexes make searches fast. But they take space.",
+      "output_b": "Database indexes (such as B-trees) create auxiliary lookup structures that drastically accelerate SELECT queries from O(N) full-table scans to O(log N) traversals. The trade-off is write amplification: every INSERT, UPDATE, and DELETE must synchronously mutate the index, consuming storage and reducing write throughput."
+    },
+    {
+      "id": "ab_08",
+      "input": "Explain the difference between process and thread.",
+      "output_a": "A process is a program running on your computer. A thread is smaller part of a process.",
+      "output_b": "A process is an independent execution entity with its own dedicated virtual address space, file handles, and security context. A thread is a lightweight execution stream within a process; multiple threads in the same process share heap memory and static variables, enabling low-overhead communication but requiring concurrency synchronization."
+    },
+    {
+      "id": "ab_09",
+      "input": "What does ACID stand for in transaction processing?",
+      "output_a": "Atomicity, Consistency, Isolation, Durability for databases.",
+      "output_b": "ACID guarantees transactional integrity:\n- Atomicity: All modifications succeed or all are rolled back (all-or-nothing).\n- Consistency: Transactions transition the database from one valid state to another without violating schema constraints.\n- Isolation: Concurrent transactions execute without cross-transaction dirty reads or race conditions.\n- Durability: Committed transactions persist permanently across hardware crashes via write-ahead logging (WAL)."
+    },
+    {
+      "id": "ab_10",
+      "input": "How does HTTPS establish secure communication?",
+      "output_a": "HTTPS encrypts the traffic using SSL certificates so hackers cannot read your messages.",
+      "output_b": "HTTPS secures communication via TLS: 1) The client and server agree on cryptographic ciphers; 2) The server provides an asymmetric X.509 certificate validated against trusted root CAs; 3) They perform key exchange (e.g., ECDHE) to derive shared symmetric session keys; 4) All subsequent application data is encrypted using high-performance symmetric ciphers (AES-GCM or ChaCha20)."
+    },
+    {
+      "id": "ab_11",
+      "input": "Explain garbage collection in Python.",
+      "output_a": "Python cleans memory automatically so you do not have to call free like in C.",
+      "output_b": "Python memory management combines: 1) Reference Counting as the primary mechanism, deallocating objects immediately when reference counts hit zero; and 2) A generational cyclic garbage collector (Generations 0, 1, 2) utilizing doubly-linked lists to detect and resolve circular reference cycles."
+    },
+    {
+      "id": "ab_12",
+      "input": "What is an API gateway and why is it used in microservices?",
+      "output_a": "An API gateway is a front server that receives web requests and sends them to backend APIs.",
+      "output_b": "An API gateway is a centralized reverse proxy that decouples clients from microservice topologies. It encapsulates cross-cutting operational concerns including TLS termination, JWT authentication, rate limiting, circuit breaking, request routing, and telemetry, eliminating redundant logic in microservices."
+    },
+    {
+      "id": "ab_13",
+      "input": "What is overfitting in machine learning and how is it mitigated?",
+      "output_a": "Overfitting is when your model learns too much and gets 100% on training but bad on test data.",
+      "output_b": "Overfitting occurs when a high-capacity model memorizes training noise rather than true underlying population distributions, yielding low training loss but poor test generalization. Mitigations include: L1/L2 weight regularization, dropout layers, early stopping, cross-validation, and dataset expansion."
+    },
+    {
+      "id": "ab_14",
+      "input": "What is the difference between TCP and UDP?",
+      "output_a": "TCP is reliable and slow. UDP is fast and loses packets.",
+      "output_b": "TCP is a connection-oriented transport protocol guaranteeing reliable, in-order, error-checked packet delivery through sequence numbers, acknowledgments, and congestion control (ideal for HTTP, SSH). UDP is connectionless and lightweight with zero transmission guarantees, minimizing latency for real-time applications (VoIP, streaming, gaming)."
+    },
+    {
+      "id": "ab_15",
+      "input": "How does Redis achieve high throughput in-memory caching?",
+      "output_a": "Redis is fast because it runs in memory and uses C programming.",
+      "output_b": "Redis achieves >100,000 QPS through three architectural design choices: 1) Pure in-memory data storage avoiding disk I/O; 2) A non-blocking single-threaded event loop (epoll/kqueue) that eliminates thread context-switching and mutex lock contention; and 3) Custom cache-conscious C data structures (ziplists, skiplists, sds)."
+    },
+    {
+      "id": "ab_16",
+      "input": "Explain the concept of zero-trust network architecture.",
+      "output_a": "Zero trust means you do not trust anyone on the network and require passwords.",
+      "output_b": "Zero Trust ('never trust, always verify') discards legacy perimeter security. It treats all network traffic—internal and external—as potentially compromised, enforcing explicit identity verification, dynamic risk-based device posture evaluation, least-privilege microsegmentation, and end-to-end encryption for every transaction."
+    },
+    {
+      "id": "ab_17",
+      "input": "What is DNS and what is its role on the Internet?",
+      "output_a": "DNS translates domain names like google.com to IP addresses.",
+      "output_b": "DNS is a globally distributed hierarchical database that resolves human-readable hostnames to numerical IP addresses. When querying a domain, the resolver traverses root servers (.), Top-Level Domain servers (.com), and authoritative nameservers, leveraging TTL caching to reduce resolution latency."
+    },
+    {
+      "id": "ab_18",
+      "input": "What is gradient descent and learning rate in deep learning?",
+      "output_a": "Gradient descent minimizes error. Learning rate is the speed.",
+      "output_b": "Gradient descent is a first-order optimization algorithm that calculates the partial derivatives of the loss function with respect to model parameters and updates weights in the negative gradient direction. The learning rate is a scaling scalar that controls step size; excessively high rates cause divergence, while overly low rates stall convergence."
+    },
+    {
+      "id": "ab_19",
+      "input": "What is the purpose of Kubernetes Pods?",
+      "output_a": "Pods are containers running in Kubernetes clusters.",
+      "output_b": "A Pod is Kubernetes' fundamental atomic scheduling unit, encapsulating one or more tightly coupled containers. Co-located containers in a pod share a single Linux network namespace (localhost routing, identical IP address), shared IPC, and mounted storage volumes, coordinating lifecycle hooks together."
+    },
+    {
+      "id": "ab_20",
+      "input": "Explain Git branching and merge conflicts.",
+      "output_a": "Git branches allow working on different features. Conflicts happen when two people edit the same file.",
+      "output_b": "In Git, a branch is an isolated pointer to a specific commit in the directed acyclic graph (DAG). Merge conflicts arise when two divergent branches apply differing edits to the identical byte offsets in a file; Git halts automatic three-way merge resolution and marks conflict blocks for developer reconciliation."
+    }
+  ]
+}

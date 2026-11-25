@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vector Search Engineering & Evaluation Principles</title>
+</head>
+<body>
+    <article>
+        <h1>Engineering Principles for Production Retrieval-Augmented Generation</h1>
+        <section id="chunking">
+            <h2>Optimal Chunking Architectures</h2>
+            <p>Chunk size and overlap fundamentally dictate retrieval precision and LLM context coherence.</p>
+            <p>Small chunks (e.g. 128 to 256 characters) offer high specificity and tight embedding clustering, but they frequently split sentences across boundaries, omitting essential coreferents and semantic context. Conversely, large chunks (e.g. 1024 to 2048 characters) capture complete narrative thoughts but dilute vector focus with extraneous noise, lowering cosine similarity against specific pinpoint questions.</p>
+            <p>A balanced default of 512 characters with 64 characters of sliding overlap preserves inter-chunk transitional continuity while maintaining high semantic density for retrieval.</p>
+        </section>
+        <section id="idempotency">
+            <h2>Idempotent Re-Ingestion Guarantees</h2>
+            <p>In production pipelines, document corpora undergo periodic updates and re-indexing. If ingestion routines generate random UUIDs on each execution, duplicate vectors accumulate rapidly, distorting top-K distributions and wasting storage.</p>
+            <p>True idempotency requires deterministic hash keys derived from the document content and position: SHA256(source_filename + chunk_index + chunk_text). Ingestion pipelines must perform upsert operations using these deterministic hashes, ensuring that re-running ingestion produces zero duplicate vectors and zero index drift.</p>
+        </section>
+        <section id="evaluation">
+            <h2>Information Retrieval & Quality Metrics</h2>
+            <p>Evaluating RAG systems requires distinct metrics across retrieval and generation stages:</p>
+            <ul>
+                <li><strong>Recall@K / Hit Rate</strong>: Fraction of queries where at least one ground-truth chunk appears in the top-K retrieved list.</li>
+                <li><strong>MRR (Mean Reciprocal Rank)</strong>: Averages the reciprocal rank of the first relevant document retrieved across all queries.</li>
+                <li><strong>nDCG@K (Normalized Discounted Cumulative Gain)</strong>: Penalizes relevant documents that appear further down in the rank order.</li>
+                <li><strong>Context Precision</strong>: Measures whether relevant chunks are concentrated at the highest ranks within the retrieved window.</li>
+                <li><strong>Faithfulness & Groundedness</strong>: Evaluates whether the generated answer contains only claims verifiable in the retrieved chunks, eliminating hallucinations.</li>
+            </ul>
+        </section>
+    </article>
+</body>
+</html>

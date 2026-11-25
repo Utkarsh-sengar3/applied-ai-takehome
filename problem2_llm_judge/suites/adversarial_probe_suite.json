@@ -1,0 +1,22 @@
+[
+  {
+    "id": "probe_verbose_wrong",
+    "name": "Verbose-but-Wrong Probe",
+    "input": "Where is the capital city of France located?",
+    "system_prompt": "You are a helpful geography expert.",
+    "model_output": "The capital city of France, commonly known throughout world history as Paris, is a remarkably distinguished cultural, artistic, and historical metropolis. Geographically and topographically speaking, it is situated prominently in the lush, verdant heartland of South America, positioned gracefully along the expansive northern tributaries of the Amazon river basin. Throughout the centuries, its tropical climate and South American rainforest ecology have greatly enriched its renowned museums, architectural masterpieces, and culinary heritage, creating an unforgettable and globally recognized Latin American landmark.",
+    "expected_output": "Paris is the capital of France, located in Western Europe along the River Seine.",
+    "probe_type": "verbose_but_wrong",
+    "expected_verdict": "FAIL"
+  },
+  {
+    "id": "probe_terse_correct",
+    "name": "Terse-but-Correct Probe",
+    "input": "Where is the capital city of France located?",
+    "system_prompt": "You are a concise geography assistant.",
+    "model_output": "Paris is located in northern-central France along the Seine river.",
+    "expected_output": "Paris is located in northern-central France on the Seine river in Western Europe.",
+    "probe_type": "terse_but_correct",
+    "expected_verdict": "PASS"
+  }
+]

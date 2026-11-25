@@ -1,0 +1,162 @@
+[
+  {
+    "id": "q01",
+    "question": "What is the monthly infrastructure cost for 1M vectors on ChromaDB versus a Managed Vector DB?",
+    "expected_sources": ["database_benchmarks.pdf"],
+    "expected_chunk_keywords": ["1,000,000", "$0.96", "$280.00", "Monthly Savings"],
+    "gold_answer": "ChromaDB costs $0.96 per month on a 12 GB SSD volume compared to $280.00 per month for a managed vector database (4 pods / HA), saving 99.6%.",
+    "is_answerable": true
+  },
+  {
+    "id": "q02",
+    "question": "What are the P50 and P95 retrieval latency numbers for embedded ChromaDB?",
+    "expected_sources": ["database_benchmarks.pdf"],
+    "expected_chunk_keywords": ["ChromaDB (Embedded)", "P50 Retrieval Latency = 4.2 ms", "P95 Retrieval Latency = 8.6 ms"],
+    "gold_answer": "Embedded ChromaDB achieves a P50 retrieval latency of 4.2 ms and a P95 retrieval latency of 8.6 ms.",
+    "is_answerable": true
+  },
+  {
+    "id": "q03",
+    "question": "How much RAM is required for 1 million 1536-dimensional vectors with HNSW graph indexing?",
+    "expected_sources": ["architecture_guide.md"],
+    "expected_chunk_keywords": ["1536-dimensional", "10 GB to 15 GB", "HNSW graph edges"],
+    "gold_answer": "Raw storage requires 6.14 GB, and accounting for HNSW graph edges (M=16, efConstruction=100) increases total memory to 10 GB to 15 GB of RAM.",
+    "is_answerable": true
+  },
+  {
+    "id": "q04",
+    "question": "How does ChromaDB achieve zero idle server costs compared to cloud vector databases?",
+    "expected_sources": ["architecture_guide.md"],
+    "expected_chunk_keywords": ["ChromaDB (Embedded Persistent Mode)", "zero idle server costs", "SQLite", "DuckDB/hnswlib"],
+    "gold_answer": "ChromaDB runs in-process using SQLite for metadata and DuckDB/hnswlib for vector indexing, persisting directly to the host filesystem with zero idle server cost.",
+    "is_answerable": true
+  },
+  {
+    "id": "q05",
+    "question": "What is the formula used for ensuring idempotent re-ingestion without duplicate vectors?",
+    "expected_sources": ["vector_search_principles.html"],
+    "expected_chunk_keywords": ["SHA256(source_filename + chunk_index + chunk_text)", "idempotent", "upsert"],
+    "gold_answer": "Deterministic hashes derived from SHA256(source_filename + chunk_index + chunk_text) are used for upsert operations to prevent duplicate vectors.",
+    "is_answerable": true
+  },
+  {
+    "id": "q06",
+    "question": "What are the recommended default chunk size and chunk overlap values and why?",
+    "expected_sources": ["vector_search_principles.html"],
+    "expected_chunk_keywords": ["512 characters", "64 characters", "sliding overlap"],
+    "gold_answer": "A default of 512 characters with 64 characters of sliding overlap preserves inter-chunk transitional continuity while maintaining high semantic density.",
+    "is_answerable": true
+  },
+  {
+    "id": "q07",
+    "question": "What are the disadvantages of using very small chunks (128-256 characters)?",
+    "expected_sources": ["vector_search_principles.html"],
+    "expected_chunk_keywords": ["Small chunks", "split sentences", "omitting essential coreferents"],
+    "gold_answer": "Very small chunks frequently split sentences across boundaries, omitting essential coreferents and semantic context.",
+    "is_answerable": true
+  },
+  {
+    "id": "q08",
+    "question": "What are the disadvantages of using very large chunks (1024-2048 characters)?",
+    "expected_sources": ["vector_search_principles.html"],
+    "expected_chunk_keywords": ["large chunks", "dilute vector focus", "extraneous noise"],
+    "gold_answer": "Large chunks dilute vector focus with extraneous noise, lowering cosine similarity against specific pinpoint questions.",
+    "is_answerable": true
+  },
+  {
+    "id": "q09",
+    "question": "Under what specific conditions should a team switch back to a managed vector database?",
+    "expected_sources": ["database_benchmarks.pdf"],
+    "expected_chunk_keywords": ["High Concurrent Ingestion", "5,000 upserts/sec", "Horizontal Scale-Out", "Multi-Tenant Enterprise Isolation"],
+    "gold_answer": "Teams should switch back when ingestion exceeds 5,000 upserts/sec, query traffic exceeds single-node bounds (>2,000 QPS), or multi-tenant SOC2/RBAC isolation is required.",
+    "is_answerable": true
+  },
+  {
+    "id": "q10",
+    "question": "What is the difference between pre-filtering and post-filtering in metadata search?",
+    "expected_sources": ["architecture_guide.md"],
+    "expected_chunk_keywords": ["Pre-filtering", "Post-filtering", "distance computation", "discarded afterwards"],
+    "gold_answer": "Pre-filtering applies metadata filters before distance computation, while post-filtering retrieves top-K vectors first and discards non-matching records afterwards.",
+    "is_answerable": true
+  },
+  {
+    "id": "q11",
+    "question": "What storage engine and indexing mechanism does LanceDB use for cost reduction?",
+    "expected_sources": ["architecture_guide.md"],
+    "expected_chunk_keywords": ["LanceDB", "Apache Arrow", "Lance columnar", "disk-based IVF-PQ"],
+    "gold_answer": "LanceDB uses Apache Arrow and Lance columnar format with disk-based IVF-PQ indexing, allowing vectors to remain on disk or S3 with zero memory overhead.",
+    "is_answerable": true
+  },
+  {
+    "id": "q12",
+    "question": "What monthly cost savings are achieved at 10M vectors using ChromaDB vs managed DB?",
+    "expected_sources": ["database_benchmarks.pdf"],
+    "expected_chunk_keywords": ["10,000,000", "$9.60", "$2,100.00", "$2,090.40"],
+    "gold_answer": "At 10M vectors, ChromaDB costs $9.60/month on 120 GB SSD storage vs $2,100.00/month for managed DB pods, saving $2,090.40/month (99.5%).",
+    "is_answerable": true
+  },
+  {
+    "id": "q13",
+    "question": "What is the P50 and P95 latency of pgvector on a c5.xlarge instance?",
+    "expected_sources": ["database_benchmarks.pdf"],
+    "expected_chunk_keywords": ["pgvector (Self-hosted c5.xlarge)", "P50 Latency = 6.8 ms", "P95 Latency = 14.1 ms"],
+    "gold_answer": "pgvector on a c5.xlarge achieves a P50 latency of 6.8 ms and a P95 latency of 14.1 ms.",
+    "is_answerable": true
+  },
+  {
+    "id": "q14",
+    "question": "How does pgvector eliminate a dedicated vector database bill for existing Postgres users?",
+    "expected_sources": ["architecture_guide.md"],
+    "expected_chunk_keywords": ["pgvector", "PostgreSQL", "colocate vector embeddings", "relational data"],
+    "gold_answer": "It extends PostgreSQL with IVFFlat and HNSW indexes, allowing organizations to colocate vector embeddings alongside relational data in an existing database.",
+    "is_answerable": true
+  },
+  {
+    "id": "q15",
+    "question": "What is the definition of MRR in information retrieval evaluation?",
+    "expected_sources": ["vector_search_principles.html"],
+    "expected_chunk_keywords": ["MRR (Mean Reciprocal Rank)", "reciprocal rank of the first relevant document"],
+    "gold_answer": "MRR averages the reciprocal rank of the first relevant document retrieved across all evaluated queries.",
+    "is_answerable": true
+  },
+  {
+    "id": "q16",
+    "question": "What is the definition of Context Precision in RAG evaluation?",
+    "expected_sources": ["vector_search_principles.html"],
+    "expected_chunk_keywords": ["Context Precision", "highest ranks", "retrieved window"],
+    "gold_answer": "Context precision measures whether relevant chunks are concentrated at the highest ranks within the retrieved top-k window.",
+    "is_answerable": true
+  },
+  {
+    "id": "q17",
+    "question": "What is the speed of sound on Mars during a winter dust storm?",
+    "expected_sources": [],
+    "expected_chunk_keywords": [],
+    "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+    "is_answerable": false
+  },
+  {
+    "id": "q18",
+    "question": "Who won the ICC Cricket World Cup in 1983 and what was the final score?",
+    "expected_sources": [],
+    "expected_chunk_keywords": [],
+    "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+    "is_answerable": false
+  },
+  {
+    "id": "q19",
+    "question": "What are the quarterly financial results of Apple in Q3 2024?",
+    "expected_sources": [],
+    "expected_chunk_keywords": [],
+    "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+    "is_answerable": false
+  },
+  {
+    "id": "q20",
+    "question": "How do you synthesize aspirin using salicylic acid and acetic anhydride in a chemistry lab?",
+    "expected_sources": [],
+    "expected_chunk_keywords": [],
+    "gold_answer": "I cannot find relevant context in the provided documents to answer your question.",
+    "is_answerable": false
+  }
+]
